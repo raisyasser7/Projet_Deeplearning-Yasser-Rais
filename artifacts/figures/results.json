@@ -1,0 +1,115 @@
+{
+  "p1": {
+    "accuracy": 0.9824561403508771,
+    "precision": 1.0,
+    "recall": 0.9523809523809523,
+    "f1": 0.975609756097561,
+    "roc_auc": 0.9947089947089947,
+    "init_acc": {
+      "gaussienne": 0.978021978021978,
+      "constante": 0.945054945054945,
+      "xavier": 0.978021978021978
+    },
+    "n_params": 4130
+  },
+  "p2": {
+    "cnn_acc": 0.8735,
+    "cnn_params": 107830,
+    "variants": [
+      {
+        "nom": "base",
+        "val_acc": 0.8711,
+        "params": 107830
+      },
+      {
+        "nom": "padding=0",
+        "val_acc": 0.8478,
+        "params": 44470
+      },
+      {
+        "nom": "stride=2",
+        "val_acc": 0.835,
+        "params": 21430
+      },
+      {
+        "nom": "avg-pooling",
+        "val_acc": 0.8678,
+        "params": 107830
+      },
+      {
+        "nom": "+filtres",
+        "val_acc": 0.8722,
+        "params": 212638
+      },
+      {
+        "nom": "conv 1x1",
+        "val_acc": 0.8728,
+        "params": 107872
+      }
+    ],
+    "mlp_acc": 0.8495,
+    "mlp_params": 235146
+  },
+  "p3_lm": {
+    "rnn": {
+      "final_ppl": 30.702701661778658,
+      "params": 472178,
+      "time": 0.9415814876556396
+    },
+    "lstm": {
+      "final_ppl": 30.989907171329993,
+      "params": 558962,
+      "time": 1.0042593479156494
+    },
+    "gru": {
+      "final_ppl": 28.43622055521433,
+      "params": 530034,
+      "time": 1.1885672092437745
+    },
+    "grad_max_noclip": 7.696327422353432,
+    "grad_max_clip": 1.0
+  },
+  "p3_seq2seq": {
+    "val_ppl": 14.977813732791065,
+    "bleu_greedy": 0.015490351865131568,
+    "bleu_beam": 0.020105602022179262,
+    "samples": [
+      {
+        "en": "he ' s nervous and easily frightened .",
+        "ref": "il est nerveux et facilement effrayé .",
+        "greedy": "il est un <unk> de <unk> .",
+        "beam": "il est un peu <unk> ."
+      },
+      {
+        "en": "you should throw this away .",
+        "ref": "vous devriez vous débarrasser de ceci .",
+        "greedy": "vous avez dit que vous étiez <unk> .",
+        "beam": "vous avez dit que vous étiez <unk> ."
+      },
+      {
+        "en": "do tigers purr ?",
+        "ref": "les tigres ronronnent ils ?",
+        "greedy": "<unk> vous ?",
+        "beam": "<unk> vous ?"
+      },
+      {
+        "en": "his debt came to 100 dollars .",
+        "ref": "sa dette a atteint 100 dollars .",
+        "greedy": "c ' est mon meilleur ami au lycée soir soir tom",
+        "beam": "c ' était mon meilleur ami ."
+      },
+      {
+        "en": "toss your gun over here .",
+        "ref": "jette ton arme par ici .",
+        "greedy": "<unk> et <unk> !",
+        "beam": "les <unk> sont <unk> ."
+      },
+      {
+        "en": "i ' m very concerned about her illness .",
+        "ref": "je m ' inquiète beaucoup de sa maladie .",
+        "greedy": "je ne suis pas si je suis fatigué .",
+        "beam": "je ne suis pas si je <unk> ."
+      }
+    ]
+  }
+}

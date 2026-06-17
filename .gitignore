@@ -1,0 +1,18 @@
+# Données téléchargées automatiquement par les notebooks (régénérables)
+data/
+
+# Poids de modèles sauvegardés (régénérables)
+artifacts/**/*.pt
+*.pt
+
+# Caches Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Fichiers temporaires système
+Thumbs.db
+.DS_Store
+
+# Verrou Office (fichier ~$ généré quand un .docx est ouvert)
+~$*
